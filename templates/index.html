@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Welcome to Bavaria's Survey Form!</p>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">NAME:</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">EMAIL:</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">AGE:</label>
+        <input id="number" type="number" min="18" max="100" placeholder="Enter your age" required>
+      </div>
+      <div class="form-group">
+        <label for="dropdown">Occupation:</label>
+        <select id="dropdown" required>
+          <option value="" disabled selected>Select your occupation:</option>
+          <option value="student">Student</option>
+          <option value="full-time">Full Time Employee</option>
+          <option value="part-time">Part Time Employee</option>
+          <option value="retired">Retired</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="other">Other</option>
+          <option value="prefer-not">Prefer not to say</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>How satisfied are you about your car?</p>
+        <label>
+          <input type="radio" name="satisfaction" value="very-satisfied" required> Very Satisfied
+        </label>
+        <label>
+          <input type="radio" name="satisfaction" value="satisfied"> Satisfied
+        </label>
+        <label>
+          <input type="radio" name="satisfaction" value="neutral"> Neutral
+        </label>
+        <label>
+          <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
+        </label>
+      </div>
+      <div class="form-group">
+        <p>What car do you have?</p>
+        <label>
+          <input type="checkbox" name="cars" value="bmw"> BMW
+        </label>
+        <label>
+          <input type="checkbox" name="cars" value="audi"> Audi
+        </label>
+        <label>
+          <input type="checkbox" name="cars" value="mercedes"> Mercedes
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" rows="4" placeholder="Enter any additional comments here..."></textarea>
+      </div>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
